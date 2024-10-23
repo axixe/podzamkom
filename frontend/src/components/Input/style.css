@@ -1,0 +1,41 @@
+.input-wrapper {
+    position: realtive;
+    width: 400px;
+    height: 60px;
+}
+
+.input-wrapper__label {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    padding: 0 10px;
+    background-color: #262626;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.input-wrapper__element {
+    width: calc(100% - 20px);
+    height: 100%;
+    padding: 0 0 0 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 11px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s all;
+}
+
+.input-wrapper__element:focus {
+    outline: none;
+}
+
+.input-wrapper__element:placeholder-shown {
+    border: 1px solid #FF8A00;
+}
+
+.input-wrapper__element::placeholder {
+    font-size: 14px;
+    font-weight: 300;
+}
