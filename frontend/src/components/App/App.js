@@ -26,7 +26,7 @@ function HeaderWithRoute() {
 
 	switch (location.pathname) {
 		case '/':
-			title = 'NONE';
+			title = 'АДМИН-ПАНЕЛЬ';
 			break;
 		case '/timetable':
 			title = 'РАСПИСАНИЕ ИГР';

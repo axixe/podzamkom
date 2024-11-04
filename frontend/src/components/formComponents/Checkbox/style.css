@@ -1,0 +1,53 @@
+.checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox__input {
+    display: none; /* Скрываем стандартный чекбокс */
+}
+
+.checkbox__element {
+    width: 15px; /* Ширина чекбокса */
+    height: 15px; /* Высота чекбокса */
+    background-color: #454545; /* Цвет по умолчанию */
+    border-radius: 4px; /* Радиус границ */
+    position: relative;
+    margin-right: 10px; /* Отступ между чекбоксом и текстом */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.checkbox__input:checked + .checkbox__element {
+    background-color: #FF8A00; /* Цвет при checked */
+}
+
+.checkbox__input:checked + .checkbox__element:after {
+    content: '';
+    position: absolute;
+    width: 3px; /* Ширина первой линии галочки */
+    height: 10px; /* Высота первой линии галочки */
+    background-color: white; /* Цвет галочки */
+    border-radius: 10px;
+    left: 60%;
+    top: 20%; /* Устанавливаем немного выше центра */
+    transform: translateX(-50%) rotate(45deg); /* Поворачиваем для создания галочки */
+}
+
+.checkbox__input:checked + .checkbox__element:before {
+    content: '';
+    position: absolute;
+    width: 3px; /* Ширина второй линии галочки */
+    height: 6px; /* Высота второй линии галочки */
+    background-color: white; /* Цвет галочки */
+    border-radius: 10px;
+    left: 18%; /* Устанавливаем немного левее */
+    top: 60%; /* Устанавливаем ниже центра */
+    transform: translateY(-50%) rotate(-45deg); /* Поворачиваем для создания галочки */
+}
+
+.checkbox__label {
+    font-size: 14px; /* Размер текста */
+    font-weight: 300;
+}

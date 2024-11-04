@@ -1,0 +1,11 @@
+.users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users__warning {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}

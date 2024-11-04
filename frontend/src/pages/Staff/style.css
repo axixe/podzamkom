@@ -1,0 +1,30 @@
+.staff {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.staff__container-form,
+.staff__container-staff {
+    width: 100%;
+}
+
+.staff__container-form {
+    height: max-content;
+    padding-right: 100px;
+    border-right: 1px solid #555555;
+}
+
+.staff__container-staff {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 100px;
+}
+
+.staff__access-rights-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}

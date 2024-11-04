@@ -1,0 +1,27 @@
+.promo {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.promo__container-form,
+.promo__container-promo {
+    width: 100%;
+}
+
+.promo__container-form {
+    height: max-content;
+    padding-right: 100px;
+    border-right: 1px solid #555555;
+}
+
+.promo__container-promo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 100px;
+}
+
+.promo__container-promo span {
+    display: block;
+}

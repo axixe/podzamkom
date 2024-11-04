@@ -43,23 +43,18 @@
     cursor: pointer;
 }
 
+.sidebar__button--active,
+.sidebar__button--active .icon {
+    color: #FF8A00;
+    cursor: auto;
+}
+
 .sidebar__button:first-child {
     margin-top: 0;
 }
 
-.sidebar__button:nth-last-of-type(1) {
-    position: absolute;
-    bottom: 20px;
-}
-
-.sidebar__button:nth-last-of-type(2) {
-    position: absolute;
-    bottom: 20px;
-    transform: translateY(-60px);
-}
-
-.sidebar__button:hover,
-.sidebar__button:hover .icon {
+.sidebar__button:not(.sidebar__button--active):hover,
+.sidebar__button:not(.sidebar__button--active):hover .icon {
     color: #ffdaaf;
-    transition: .3s all;
+    transition: 0.3s all;
 }

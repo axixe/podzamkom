@@ -10,7 +10,8 @@ body {
 }
 
 .icon {
-    display: flex;
+    display: inline-block;
+    /* display: flex; */
     width: 26px;
     height: 30px;
     transition: .3s all;
@@ -22,4 +23,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.validation {
+    display: flex;
+    padding: 10px 0 0 20px;
+    color: #FF6363;
+    font-size: 12px;
+    font-weight: 300;
 }

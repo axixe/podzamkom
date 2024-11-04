@@ -2,6 +2,7 @@ import React from "react";
 import './style.css';
 
 import logo from '../../assets/img/logo.svg';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
     return (
@@ -17,19 +18,30 @@ export default function Sidebar() {
 }
 
 function SidebarButtons() {
+    const location = useLocation();
+    const activePath = location.pathname.split('/')[1];
+
     const buttons = {
-        timetable: ['Расписание игр', 'fa-solid fa-calendar-days'],
-        promo: ['Промокоды', 'fa-solid fa-ticket'],
-        staff: ['Сотрудники', 'fa-solid fa-id-card'],
-        users: ['Пользователи', 'fa-solid fa-user'],
-        home: ['На главную', 'fa-solid fa-house'],
-        support: ['Поддержка', 'fa-solid fa-headset']
+        timetable: ['Расписание игр', 'fa-solid fa-calendar-days', 'timetable'],
+        promo: ['Промокоды', 'fa-solid fa-ticket', 'promo'],
+        staff: ['Сотрудники', 'fa-solid fa-id-card', 'staff'],
+        users: ['Пользователи', 'fa-solid fa-user', 'users']
     };
+
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        navigate(`/${path}`);
+    }
 
     return (
         <ul className='sidebar__button-wrapper'>
-            {Object.entries(buttons).map(([key, [text, iconClass]]) => (
-                <li key={key} className='sidebar__button'>
+            {Object.entries(buttons).map(([key, [text, iconClass, link]]) => (
+                <li 
+                    key={key} 
+                    className={`sidebar__button${activePath === link ? ' sidebar__button--active' : ''}`}
+                    onClick={() => handleNavigate(link)}
+                >
                     <i className={`${iconClass} icon`}></i>
                     {text}
                 </li>
